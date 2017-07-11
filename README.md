@@ -9,6 +9,7 @@ For Viktoriia Chernyshuk (Padawan):
 * Get experience with "css-animation"
 * Get experience with DOM API
 * Get experience with DOM events
+* Get fun
 
 For Vladimir (Jedi):
 * Get experience with project leading
