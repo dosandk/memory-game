@@ -4,7 +4,7 @@ const domElements = {
     scores: document.querySelector('.scores'),
     timer: document.querySelector('.timer')
 };
-const playGroundSize = parseInt(domElements.chooser.value, 10);
+let playGroundSize = parseInt(domElements.chooser.value, 10);
 const scoresForWin = 2;
 
 let debounce = false;
@@ -25,20 +25,22 @@ function generatePlayground(n) {
     minutes = 0;
     seconds = 0;
     score = 0;
-
-    if(timerId){
-        clearInterval(timerId)
-    };
-
+    resetValues();
+    if(timerId) {
+        stopTimer();
+        timerId = '';
+    }
     renderScores();
     renderTimer();
 
     cardsFront.forEach(el => cards += createCard(el));
     domElements.playground.insertAdjacentHTML("beforeend", cards);
 
+    if(n < 8){
+        domElements.playground.classList.remove('big-playground')
+    }
     if(n >= 6){
         Array.from(document.getElementsByClassName('card')).forEach(el => el.classList.add('card-for-6x6'));
-        domElements.playground.classList.remove('big-playground');
     }
     if (n >= 8) {
         Array.from(document.getElementsByClassName('card')).forEach(el => el.classList.add('card-for-8x8'));
@@ -93,7 +95,8 @@ function createCard(name){
 
 function onSizeChange(e) {
     domElements.playground.innerHTML = '';
-    generatePlayground(parseInt(e.value, 10));
+    playGroundSize = parseInt(e.value, 10);
+    generatePlayground(playGroundSize);
 }
 
 // Helpers for gaming functionality
