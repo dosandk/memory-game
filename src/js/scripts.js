@@ -25,6 +25,11 @@ function generatePlayground(n) {
     minutes = 0;
     seconds = 0;
     score = 0;
+
+    if(timerId){
+        clearInterval(timerId)
+    };
+
     renderScores();
     renderTimer();
 
@@ -36,6 +41,7 @@ function generatePlayground(n) {
         domElements.playground.classList.remove('big-playground');
     }
     if (n >= 8) {
+        Array.from(document.getElementsByClassName('card')).forEach(el => el.classList.add('card-for-8x8'));
         domElements.playground.classList.add('big-playground');
     }
 }

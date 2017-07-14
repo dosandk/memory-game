@@ -95,12 +95,14 @@ table {
 .card {
     border: 1px solid #ddd;
     cursor: pointer;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 20px;
     height: 150px;
     margin: 5px;
     position: relative;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
-    width: 150px;   
+    width: 150px; 
 }
 
 .card-for-6x6 {
@@ -125,8 +127,6 @@ table {
 }
 
 .back {
-    font-family: 'Cabin Sketch', cursive;
-    font-size: 20px;
     padding:  25% 10px;
     text-align: center;
 }
@@ -170,4 +170,97 @@ table {
 
 .new-game-btn:active {
     box-shadow: none;
+}
+
+@media screen and (max-width: 800px) {
+    .game-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        align-self: center;
+        text-align: center;
+    }
+
+    .playground {
+        width: 600px;
+    }
+
+    .big-playground {
+        width: 650px;
+        margin: 0;
+    }
+
+    .card {
+        width: 125px;
+        height: 125px;
+    }
+
+    .card-for-6x6 {
+        width: 75px;
+        height: 75px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .playground {
+        width: 100vw;
+    }
+
+    .card {
+        font-size: 15px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .card-for-6x6 {
+        height: 50px;
+        width: 50px;
+        font-size: 12px;
+    }
+
+    .card-for-6x6 .back {
+        padding: 25% 0;
+    }
+
+    .card-for-8x8 {
+        border-right: none;
+        margin: 0;
+    }
+
+    .card-for-8x8:nth-child(8n){
+        border-right: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .card-for-8x8 {
+        border: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        font-size: 12px;
+        height: 65px;
+        margin: 5px;
+        width: 65px;
+    }
+
+     .card-for-6x6 {
+        height: 50px;
+        width: 50px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .card-for-8x8 {
+        border: 1px solid #ddd;
+    }
 }
