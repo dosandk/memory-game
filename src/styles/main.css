@@ -68,11 +68,28 @@ table {
     text-align: center;
 }
 
+.game-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    margin: 10px;
+    min-width: 100px;
+}
+
+.statistic {
+    margin: 10px 0;
+}
+
 .playground {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     width: 700px;
+}
+
+.big-playground {
+    width: 900px;
 }
 
 .card {
@@ -84,6 +101,11 @@ table {
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
     width: 150px;   
+}
+
+.card-for-6x6 {
+    height: 100px;
+    width: 100px;
 }
 
 .turned {
@@ -105,6 +127,47 @@ table {
 .back {
     font-family: 'Cabin Sketch', cursive;
     font-size: 20px;
-    padding: 45px 10px;
+    padding:  25% 10px;
     text-align: center;
+}
+
+.end-game-popup {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    bottom: 0;
+    box-shadow: 0 0 15px #ddd;
+    box-sizing: border-box;
+    height: 300px;
+    left: 0;
+    margin: auto;
+    padding-top: 4%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 300px;
+}
+
+.final-text {
+    font-family: 'Cabin Sketch';
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.new-game-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #ddd;
+    font-family: 'Cabin Sketch';
+    outline: none;
+    padding: 10px;
+}
+
+.new-game-btn:hover {
+     box-shadow: 0 0 8px #d3d3d3;
+}
+
+.new-game-btn:active {
+    box-shadow: none;
 }
