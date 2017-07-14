@@ -1,0 +1,173 @@
+/*RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*FONTS*/
+* {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*COMPONENTS*/
+
+.title {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.game-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    margin: 10px;
+    min-width: 100px;
+}
+
+.statistic {
+    margin: 10px 0;
+}
+
+.playground {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 700px;
+}
+
+.big-playground {
+    width: 900px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 150px;   
+}
+
+.card-for-6x6 {
+    height: 100px;
+    width: 100px;
+}
+
+.turned {
+    transform: rotateY(180deg);
+}
+
+.side {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 20px;
+    padding:  25% 10px;
+    text-align: center;
+}
+
+.end-game-popup {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    bottom: 0;
+    box-shadow: 0 0 15px #ddd;
+    box-sizing: border-box;
+    height: 300px;
+    left: 0;
+    margin: auto;
+    padding-top: 4%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 300px;
+}
+
+.final-text {
+    font-family: 'Cabin Sketch';
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.new-game-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #ddd;
+    font-family: 'Cabin Sketch';
+    outline: none;
+    padding: 10px;
+}
+
+.new-game-btn:hover {
+     box-shadow: 0 0 8px #d3d3d3;
+}
+
+.new-game-btn:active {
+    box-shadow: none;
+}
