@@ -11,76 +11,21 @@
 </head>
 
 <body>
-    <h1 class='title'>Memory game 4x4<h1>
+    <h1 class='title'>Memory game<h1>
+    <main class='game-wrapper'>
+        <aside class='sidebar'>
+            <select class='chooser' onchange="onSizeChange(this)">
+                <option value="4">4x4</option>
+                <option value="6">6x6</option>
+                <option value="8">8x8</option>
+            </select>
+            <p class='statistic'>Timer: <span class='timer'></span></p>
+            <p class='statistic'>Score: <span class='scores'>0</span></p>
+        </aside>
 
-    <section class='playground'>
-        <figure class='card'>
-            <img src="../pics/1.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/14.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/15.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/13.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
+        <section class='playground'></section>
+    </main>
 
-        <figure class='card'>
-            <img src="../pics/5.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/12.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/2.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/14.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-
-        <figure class='card'>
-            <img src="../pics/19.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div></figure>
-        <figure class='card'>
-            <img src="../pics/15.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/13.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/12.jpg" class=' side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-
-        <figure class='card'>
-            <img src="../pics/5.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/1.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div></figure>
-        <figure class='card'>
-            <img src="../pics/19.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-        <figure class='card'>
-            <img src="../pics/2.jpg" class='side front'>
-            <div class='side back'>Vickie's memory</div>
-        </figure>
-    </section>
-
-    <script src="../js/rotate.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

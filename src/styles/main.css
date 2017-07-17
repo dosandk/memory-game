@@ -68,6 +68,19 @@ table {
     text-align: center;
 }
 
+.game-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    margin: 10px;
+    min-width: 100px;
+}
+
+.statistic {
+    margin: 10px 0;
+}
+
 .playground {
     display: flex;
     flex-wrap: wrap;
@@ -75,15 +88,26 @@ table {
     width: 700px;
 }
 
+.big-playground {
+    width: 900px;
+}
+
 .card {
     border: 1px solid #ddd;
     cursor: pointer;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 20px;
     height: 150px;
     margin: 5px;
     position: relative;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
-    width: 150px;   
+    width: 150px; 
+}
+
+.card-for-6x6 {
+    height: 100px;
+    width: 100px;
 }
 
 .turned {
@@ -103,8 +127,148 @@ table {
 }
 
 .back {
-    font-family: 'Cabin Sketch', cursive;
-    font-size: 20px;
-    padding: 45px 10px;
+    padding:  25% 10px;
     text-align: center;
+}
+
+.end-game-popup {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    bottom: 0;
+    box-shadow: 0 0 15px #ddd;
+    box-sizing: border-box;
+    height: 300px;
+    left: 0;
+    margin: auto;
+    padding-top: 4%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 300px;
+}
+
+.final-text {
+    font-family: 'Cabin Sketch';
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.new-game-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #ddd;
+    font-family: 'Cabin Sketch';
+    outline: none;
+    padding: 10px;
+}
+
+.new-game-btn:hover {
+     box-shadow: 0 0 8px #d3d3d3;
+}
+
+.new-game-btn:active {
+    box-shadow: none;
+}
+
+@media screen and (max-width: 800px) {
+    .game-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        align-self: center;
+        text-align: center;
+    }
+
+    .playground {
+        width: 600px;
+        justify-content: center;
+    }
+
+    .big-playground {
+        width: 700px;
+        margin: 0;
+    }
+
+    .card {
+        width: 125px;
+        height: 125px;
+    }
+
+    .card-for-6x6 {
+        width: 75px;
+        height: 75px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .playground {
+        width: 100vw;
+    }
+
+    .card {
+        font-size: 15px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .card-for-6x6 {
+        height: 50px;
+        width: 50px;
+        font-size: 12px;
+    }
+
+    .card-for-6x6 .back {
+        padding: 25% 0;
+    }
+
+    .card-for-8x8 {
+        border-right: none;
+        margin: 0;
+    }
+
+    .card-for-8x8:nth-child(8n){
+        border-right: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .card-for-8x8 {
+        border: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .card-for-8x8 {
+        border: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        font-size: 12px;
+        height: 65px;
+        margin: 5px;
+        width: 65px;
+    }
+
+     .card-for-6x6 {
+        height: 50px;
+        width: 50px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .card-for-8x8 {
+        border: 1px solid #ddd;
+    }
 }
