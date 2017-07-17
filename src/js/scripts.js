@@ -4,9 +4,9 @@ const domElements = {
     scores: document.querySelector('.scores'),
     timer: document.querySelector('.timer')
 };
-let playGroundSize = parseInt(domElements.chooser.value, 10);
 const scoresForWin = 2;
 
+let playGroundSize = parseInt(domElements.chooser.value, 10);
 let debounce = false;
 let cardToCompare = '';
 let opened = 0;
@@ -94,12 +94,16 @@ function createCard(name){
 }
 
 function onSizeChange(e) {
-    domElements.playground.innerHTML = '';
     playGroundSize = parseInt(e.value, 10);
-    generatePlayground(playGroundSize);
+    startNewGame();
 }
 
 // Helpers for gaming functionality
+
+function startNewGame(){
+    domElements.playground.innerHTML = '';
+    generatePlayground(playGroundSize);
+}
 
 function rotate(card) {
     card.classList.toggle('turned');
@@ -134,11 +138,6 @@ function onDifferentCards(...args){
 function detectEndOfGame() {
     const matchedCards = document.getElementsByClassName('matched');
     return matchedCards.length === playGroundSize*playGroundSize;
-}
-
-function startNewGame(){
-    domElements.playground.innerHTML = '';
-    generatePlayground(playGroundSize);
 }
 
 function generateEndGamePopup(){

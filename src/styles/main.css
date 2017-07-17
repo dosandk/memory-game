@@ -175,6 +175,7 @@ table {
 @media screen and (max-width: 800px) {
     .game-wrapper {
         flex-direction: column;
+        align-items: center;
     }
 
     .sidebar {
@@ -184,10 +185,11 @@ table {
 
     .playground {
         width: 600px;
+        justify-content: center;
     }
 
     .big-playground {
-        width: 650px;
+        width: 700px;
         margin: 0;
     }
 
@@ -231,6 +233,12 @@ table {
 
     .card-for-8x8:nth-child(8n){
         border-right: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .card-for-8x8 {
+        border: 1px solid #ddd;
     }
 }
 
