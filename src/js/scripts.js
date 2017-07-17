@@ -52,7 +52,7 @@ function onCardClick(e) {
      let target = e.target;
 
      while(target != domElements.playground){
-         if(target.classList.contains('card') 
+         if(target.classList.contains('card')
             && !target.classList.contains('matched')
             && !debounce
             && target !== cardToCompare){
@@ -86,7 +86,7 @@ function randomizer(n) {
 
 function createCard(name){
     const card = `<figure class='card' id="img-${name}">
-            <img src="../pics/${name}.jpg" class='side front'>
+            <img src="./src/pics/${name}.jpg" class='side front'>
             <div class='side back'>Vickie's memory</div>
         </figure>`;
 
