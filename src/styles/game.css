@@ -1,0 +1,193 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    color: white;
+    background: rebeccapurple;
+}
+
+/*FONTS*/
+* {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*COMPONENTS*/
+
+.title {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 700;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    text-align: center;
+    margin: 10px;
+    min-width: 100px;
+}
+
+.statistic {
+    margin: 10px 0;
+}
+
+.playground {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 700px;
+}
+
+.big-playground {
+    width: 900px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 20px;
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 150px;
+}
+
+.card-for-6x6 {
+    height: 100px;
+    width: 100px;
+}
+
+.turned {
+    transform: rotateY(180deg);
+}
+
+.side {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    padding:  25% 10px;
+    text-align: center;
+    background: url(../pics/card-back.jpg) no-repeat center/contain;
+}
+
+.end-game-popup {
+    color: black;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    bottom: 0;
+    box-shadow: 0 0 15px #ddd;
+    box-sizing: border-box;
+    height: 300px;
+    left: 0;
+    margin: auto;
+    padding-top: 4%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 300px;
+}
+
+.final-text {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.new-game-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #ddd;
+    outline: none;
+    padding: 10px;
+}
+
+.new-game-btn:hover {
+    box-shadow: 0 0 8px #d3d3d3;
+}
+
+.new-game-btn:active {
+    box-shadow: none;
+}
+
+@media screen and (max-width: 800px) {
+    .game-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .playground {
+        width: 600px;
+        justify-content: center;
+    }
+
+    .big-playground {
+        width: 700px;
+        margin: 0;
+    }
+
+    .card {
+        width: 125px;
+        height: 125px;
+    }
+
+    .card-for-6x6 {
+        width: 75px;
+        height: 75px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .playground {
+        width: 100vw;
+    }
+
+    .card {
+        font-size: 15px;
+        height: 80px;
+        width: 80px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .card {
+        font-size: 12px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        font-size: 12px;
+        height: 65px;
+        margin: 5px;
+        width: 65px;
+    }
+}
